@@ -1,0 +1,41 @@
+{
+  "name": "displaydtreelayout",
+  "description": "displaydtreelayout",
+  "version": "0.0.1",
+  "main": "dist/DisplayDtree.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/DisplayDtree.js --out-file dist/DisplayDtree.js",
+    "postbuild": "browserify -t [ babelify --presets [react es2015] ] src/main.js -o browser/bundle.js -vd",
+    "watch": "watchify -t [ babelify --presets [react es2015] ] src/main.js -o browser/bundle.js -vd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minicast/displaydtreelayout.git"
+  },
+  "homepage": "https://github.com/minicast/bolformeditorui#readme",
+  "bugs": {
+    "url": "https://github.com/minicast/displaydtreelayout/issues"
+  },
+  "keywords": [
+    "displaydtreelayout"
+  ],
+  "author": "minicast <minicast@gmx.com> (https://github.com/minicast)",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-es2015": "6.1.2",
+    "babelify": "7.2.0",
+    "bolformula": "0.1.1",
+    "d3": "3.5.6",
+    "katex": "0.5.1",
+    "react": "0.14.2",
+    "react-dom": "0.14.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "6.1.2",
+    "babel-preset-react": "6.1.2",
+    "babelify": "7.2.0",
+    "browserify": "12.0.1",
+    "watchify": "3.6.0"
+  }
+}
